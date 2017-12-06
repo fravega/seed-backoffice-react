@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "extends": [ "fravega", "fravega/es6.js", "fravega/react.js", "fravega/flow.js" ],
+  "plugins": [
+    "flowtype"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "globals": {},
+  "rules": {
+    "no-extra-parens": [ "error", "functions" ],
+    "flowtype/define-flow-type": 2
+  }
+}

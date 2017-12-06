@@ -1,0 +1,29 @@
+[ignore]
+.*/node_modules/apollo-client/node_modules/.*
+.*/node_modules/apollo-link-core/node_modules/.*
+.*/node_modules/jss/.*
+.*/node_modules/react-event-listener/src
+.*/node_modules/react-jss/.*
+.*/node_modules/material-ui/**/.*\.js\.flow
+.*/node_modules/stylelint.*
+
+
+; FIX
+.*/node_modules/http-parser-js/package.json
+
+[include]
+
+[libs]
+flow-typed
+defs
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.export_star_as=enable
+esproposal.decorators=ignore
+
+unsafe.enable_getters_and_setters=true
+
+suppress_type=$FlowFixMe
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
