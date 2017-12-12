@@ -5,7 +5,8 @@
 * Flow
 * React
 * Redux
-* GraphQL ( react-apollo )
+* GraphQL 1.9.x
+* react-apollo 2.0.x
 * Express
 * Material UI ( v1 )
 

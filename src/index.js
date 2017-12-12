@@ -6,6 +6,7 @@ import { client } from './graphql'
 import { ConnectedRouter } from 'react-router-redux'
 import { CookiesProvider } from 'react-cookie'
 import MainPage from './pages'
+import { Provider } from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -13,11 +14,13 @@ const root = document.getElementById('root')
 
 if (root) {
   ReactDOM.render((
-    <ApolloProvider client={ client } store={ store }>
-      <ConnectedRouter history={ history }>
-        <CookiesProvider>
-          <MainPage />
-        </CookiesProvider>
-      </ConnectedRouter>
-    </ApolloProvider>), root)
+    <Provider store={ store }>
+      <ApolloProvider client={ client }>
+        <ConnectedRouter history={ history }>
+          <CookiesProvider>
+            <MainPage />
+          </CookiesProvider>
+        </ConnectedRouter>
+      </ApolloProvider>
+    </Provider>), root)
 }

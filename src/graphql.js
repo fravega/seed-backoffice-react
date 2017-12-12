@@ -1,5 +1,5 @@
 // @flow
-import { ApolloClient, createNetworkInterface } from 'react-apollo'
+import { ApolloClient, createNetworkInterface } from 'apollo-client'
 
 export const client: ApolloClient = new ApolloClient({
   addTypename: true,
